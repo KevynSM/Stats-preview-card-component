@@ -25,7 +25,7 @@ body {
 }
 
 main {
-    max-width: 85%;
+    max-width: 335px;
     border-radius: 10px;
     background-color: var(--Dark-desaturated-blue);
     text-align: center;
@@ -40,8 +40,10 @@ main {
 
 .color-overlay img {    
     display: block;
-    width: 100%;
-    opacity: .4;
+    width: 100%;    
+    mix-blend-mode: multiply;
+    filter: brightness(1.2);
+    
 }
 
 .color-overlay, .color-overlay img {
@@ -103,18 +105,19 @@ h3 {
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 400;
+    margin-top: 1rem;
 }
 
-@media (min-width: 770px) {
+@media (min-width: 1080px) {
 
     main {        
         flex-direction: row;
-        max-width: 1300px;
+        max-width: 1080px;
     }
 
     .container {
         max-width: 50%;
-        padding: 3rem 3rem 0 3rem;
+        padding: 3rem 3rem 0 5rem;
     }
 
     .color-overlay, .color-overlay img {
@@ -138,6 +141,12 @@ h3 {
         text-align: left;
     }
 
+    h1 {
+        font-size: 2rem;
+    }
+
+
+
     ul {        
         flex-direction: row;
         justify-content: space-between; 
@@ -149,10 +158,8 @@ h3 {
     h2, h3 {
         text-align: left;
     }
-}
 
-@media (min-width:700px) and (max-width: 1300px) {
-    main {                
-        max-width: 70%;
+    h3 {
+        margin-top: .5rem;
     }
 }
